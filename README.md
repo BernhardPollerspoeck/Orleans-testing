@@ -106,6 +106,31 @@ A minimalistic asp.net.core api will act as a client in this example. *asp.net.c
 
 #### orleans.api
 Here we use the HostBuilder supplied by the template, to tell the host to *UseOrleansClient*. In there via *UseStaticClustering* we supply the main silo access point. Now we map a simple GET route that accepts the 2 input numbers and a *IClusterClient*. From this client we retreive the grain we want to execute. Then the grain can be used like any other async method with the await keyword. As last we return the result.
+> Program.cs
+```c#
+var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseOrleansClient(clientBuilder =>
+{
+	clientBuilder.UseStaticClustering(IPEndPoint.Parse("127.0.0.1:26000"));
+	clientBuilder.Configure<ClusterOptions>(o =>
+	{
+		o.ClusterId = "apsiba.workers";
+		o.ServiceId = "apsiba";
+	});
+});
+var app = builder.Build();
+app.MapGet("/add/{a}/{b}",
+	async (
+		IClusterClient grains,
+		int a,
+		int b) =>
+	{
+		var addGrain = grains.GetGrain<IMathGrain>("1");
+		var result = await addGrain.Add(a, b);
+		return Results.Ok(result);
+	});
+app.Run();
+```
 
 # Conclusion
 With relative low effort we now are able to create a fully static cluster. This certainly gives the most control, but has its drawbacks. 

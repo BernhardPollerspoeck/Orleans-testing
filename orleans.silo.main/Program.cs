@@ -1,33 +1,30 @@
 ﻿
-
-
 using Microsoft.Extensions.Hosting;
 using Orleans.Configuration;
 using System.Net;
 using orleans.extensions;
 
 var builder = Host.CreateDefaultBuilder(args);
-
 builder.UseOrleans(siloBuilder =>
 {
 	siloBuilder
-		.ConfigureStaticClusterSecondarySilo(
-			advestisedIp: IPAddress.Parse("127.0.0.1"),
-			siloPort: 25001,
-			gatewayPort: 26000,
-			primarySiloPort: IPEndPoint.Parse("127.0.0.1:25000"))
+		.ConfigureStaticClusterPrimarySilo(
+			advestisedIp: IPAddress.Loopback,
+			siloPort: 25000,
+			gatewayPort: 26000)
 		.Configure<SiloOptions>(o =>
 		{
-			o.SiloName = "Undefeated Lunch";
+			o.SiloName = "Confused Pidgeon";
 		})
 		.Configure<ClusterOptions>(o =>
 		{
 			o.ClusterId = "apsiba.workers";
 			o.ServiceId = "apsiba";
-		});
+		})
+		.UseDashboard(x => x.HostSelf = true);
 });
-
 var host = builder.Build();
-
 await host.RunAsync();
+
+
 

@@ -5,7 +5,12 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "orleans.api", "orleans.api\orleans.api.csproj", "{D522C8F8-2437-4C80-9D05-EF22DB457397}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "orleans.grains.abstraction", "orleans.grains.abstraction\orleans.grains.abstraction.csproj", "{33878B87-379C-4750-A1A2-8BFC570D8344}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "orleans.grains.abstraction", "orleans.grains.abstraction\orleans.grains.abstraction.csproj", "{33878B87-379C-4750-A1A2-8BFC570D8344}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DD53AF8E-B406-4DF2-A2B0-FD90D03AFBC6}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

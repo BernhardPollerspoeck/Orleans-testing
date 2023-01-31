@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "orleans.grains.abstraction", "orleans.grains.abstraction\orleans.grains.abstraction.csproj", "{6A960B53-E2EF-4E89-A6D2-58662E965805}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "orleans.silo.main", "orleans.silo.main\orleans.silo.main.csproj", "{5FF811B3-C5F3-48C9-AB72-C3A717960F50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "orleans.extensions", "orleans.extensions\orleans.extensions.csproj", "{A27F8080-B743-4627-9EBD-C7B0611CD5EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A960B53-E2EF-4E89-A6D2-58662E965805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A960B53-E2EF-4E89-A6D2-58662E965805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A960B53-E2EF-4E89-A6D2-58662E965805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A960B53-E2EF-4E89-A6D2-58662E965805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF811B3-C5F3-48C9-AB72-C3A717960F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF811B3-C5F3-48C9-AB72-C3A717960F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF811B3-C5F3-48C9-AB72-C3A717960F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF811B3-C5F3-48C9-AB72-C3A717960F50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27F8080-B743-4627-9EBD-C7B0611CD5EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27F8080-B743-4627-9EBD-C7B0611CD5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27F8080-B743-4627-9EBD-C7B0611CD5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27F8080-B743-4627-9EBD-C7B0611CD5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4399762D-95EA-4E36-8C18-56C4FB41E82A}
+	EndGlobalSection
+EndGlobal

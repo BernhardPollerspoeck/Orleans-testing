@@ -136,6 +136,7 @@ app.Run();
 With relative low effort we now are able to create a fully static cluster. This certainly gives the most control, but has its drawbacks. 
 - The main silo has to be always reachable from the cluster and aswell from the clients
 - All traffict flows through a single silo. This potentially creates a bottleneck.
+
 It is reccomended to use the dynamic clustering approaches where possible, but in specific, usually development related, scenarios this static cluster approach has possible benefits.
 
 
